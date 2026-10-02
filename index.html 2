@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SLX SCRIPTS</title>
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+  font-family:Arial,sans-serif;
+  background:#050505;
+  color:white;
+  min-height:100vh;
+}
+nav{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:22px 8%;
+  border-bottom:1px solid #222;
+}
+.logo{
+  font-size:22px;
+  font-weight:bold;
+}
+.logo span{color:#ff8a00}
+nav a{
+  color:#aaa;
+  text-decoration:none;
+  margin-left:25px;
+}
+nav a:hover{color:#ff8a00}
+
+.hero{
+  text-align:center;
+  padding:120px 20px 100px;
+}
+.badge{
+  display:inline-block;
+  border:1px solid #333;
+  padding:9px 16px;
+  border-radius:30px;
+  color:#ff8a00;
+  font-size:12px;
+}
+h1{
+  font-size:clamp(45px,8vw,85px);
+  margin:25px 0;
+}
+h1 span{color:#ff8a00}
+.hero p{
+  color:#888;
+  font-size:18px;
+  max-width:600px;
+  margin:auto;
+  line-height:1.6;
+}
+.buttons{margin-top:30px}
+.btn{
+  display:inline-block;
+  padding:14px 22px;
+  margin:6px;
+  border-radius:10px;
+  text-decoration:none;
+  font-weight:bold;
+}
+.main{
+  background:#ff8a00;
+  color:#000;
+}
+.second{
+  border:1px solid #333;
+  color:white;
+}
+section{
+  max-width:1100px;
+  margin:auto;
+  padding:80px 20px;
+}
+.title{
+  margin-bottom:30px;
+}
+.title small{color:#ff8a00}
+.title h2{
+  font-size:38px;
+  margin-top:8px;
+}
+.cards{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:18px;
+}
+.card{
+  background:#0d0d0d;
+  border:1px solid #222;
+  border-radius:16px;
+  padding:25px;
+}
+.card h3{margin:20px 0 10px}
+.card p{
+  color:#777;
+  line-height:1.6;
+  margin-bottom:20px;
+}
+.icon{
+  font-size:25px;
+  color:#ff8a00;
+}
+.copy{
+  background:#111;
+  color:white;
+  border:1px solid #333;
+  padding:10px 15px;
+  border-radius:8px;
+  cursor:pointer;
+}
+.copy:hover{border-color:#ff8a00}
+.discord{
+  background:#0d0d0d;
+  border:1px solid #222;
+  border-radius:18px;
+  padding:40px;
+  margin:30px auto 80px;
+  max-width:1060px;
+}
+footer{
+  border-top:1px solid #222;
+  text-align:center;
+  padding:30px;
+  color:#666;
+}
+@media(max-width:700px){
+  nav a{display:none}
+  .cards{grid-template-columns:1fr}
+  .hero{padding-top:80px}
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+  <div class="logo"><span>SLX</span> SCRIPTS</div>
+  <div>
+    <a href="#scripts">Scripts</a>
+    <a href="#discord">Discord</a>
+  </div>
+</nav>
+
+<div class="hero">
+  <div class="badge">⚡ SLX SCRIPTS</div>
+
+  <h1>Powerful <span>Scripts.</span><br>Simple Experience.</h1>
+
+  <p>
+    Welcome to SLX SCRIPTS — your place for scripts,
+    updates and the latest releases.
+  </p>
+
+  <div class="buttons">
+    <a href="#scripts" class="btn main">View Scripts</a>
+    <a href="#discord" class="btn second">Join Discord</a>
+  </div>
+</div>
+
+<section id="scripts">
+
+  <div class="title">
+    <small>LIBRARY</small>
+    <h2>Featured Scripts</h2>
+  </div>
+
+  <div class="cards">
+
+    <div class="card">
+      <div class="icon">✦</div>
+      <h3>Auto Collect</h3>
+      <p>SLX Auto Collect script.</p>
+      <button class="copy"
+      onclick="copyScript('SLX Auto Collect Script')">
+      Copy Script
+      </button>
+    </div>
+
+    <div class="card">
+      <div class="icon">◈</div>
+      <h3>Anti Lag</h3>
+      <p>SLX Anti Lag script.</p>
+      <button class="copy"
+      onclick="copyScript('SLX Anti Lag Script')">
+      Copy Script
+      </button>
+    </div>
+
+    <div class="card">
+      <div class="icon">⚙</div>
+      <h3>All In One</h3>
+      <p>All SLX scripts in one place.</p>
+      <button class="copy"
+      onclick="copyScript('SLX All In One Script')">
+      Copy Script
+      </button>
+    </div>
+
+  </div>
+</section>
+
+<section id="discord">
+
+  <div class="discord">
+    <small style="color:#ff8a00">COMMUNITY</small>
+    <h2 style="margin:12px 0">Join SLX Community</h2>
+    <p style="color:#777">
+      Get new scripts, updates and announcements.
+    </p>
+
+    <br>
+
+    <a
+      href="https://discord.com/"
+      target="_blank"
+      class="btn main">
+      Join Discord →
+    </a>
+  </div>
+
+</section>
+
+<footer>
+  © 2026 SLX SCRIPTS
+</footer>
+
+<script>
+function copyScript(text){
+  navigator.clipboard.writeText(text);
+  alert("Copied!");
+}
+</script>
+
+</body>
+</html>
